@@ -159,10 +159,11 @@
 
 ## 文本样式
 
-- text-align : center / left / right;
-- color : red;
-- text-indent : 2em;
-- line-height : 30px;
+- （水平对齐方式）text-align : center / left / right;
+- （设置字体颜色）color : red;
+- （设置首行缩进）text-indent : 2em;
+- （行高/设置文字垂直对齐方式）line-height : 30px;
+- （文本修饰）text-decoration : none/underline/overline/line-through;
 
 ## 背景样式
 
@@ -171,6 +172,27 @@
 - background-repeat : no-repeat;
 - background-position : 
 - background : red url() no-repeat 100px center;
+
+## 列表样式
+
+- list-style : none;
+
+## 超链接样式（伪类选择器）
+
+- :link 只有超链接可以用（未被访问之前）
+- :visited 只有超链接可以用（访问过后）
+- :hover 可用于任意标签（鼠标经过时）
+- :active（鼠标点击时）
+
+
+
+
+
+
+
+
+
+
 
 
 

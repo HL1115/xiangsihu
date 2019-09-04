@@ -4,6 +4,12 @@
     <meta charset="UTF-8">
     <title>Document</title>
     <style>
+        a{
+            text-decoration: none;
+        }
+        li{
+            list-style: none;
+        }
         .nav li{
             width: 224px;
             height: 42px;
@@ -12,16 +18,35 @@
             line-height: 42px;
             background: #eee url(imgs/nav1.png) no-repeat 168px center ;
         }
+        .nav a:link{
+            color: #000;
+        }
+        .nav a:visited{
+            color: green;
+        }
+        .nav a:hover{
+            color: red;
+        }
+        .nav a:active{
+            color: yellow;
+        }
+        
     </style>
 </head>
 <body>
     <ul class="nav">
-        <li>学科专业</li>
-        <li>学科专业</li>
-        <li>学科专业</li>
-        <li>学科专业</li>
-        <li>学科专业</li>
-        <li>学科专业</li>
+        <li>
+            <a href="">学科专业</a>
+        </li>
+        <li>
+            <a href="">学科专业</a>
+        </li>
+        <li>
+            <a href="">学科专业</a>
+        </li>
+        <li>
+            <a href="">学科专业</a>
+        </li>
     </ul>
 </body>
 </html>
