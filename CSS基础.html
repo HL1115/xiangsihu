@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        *{
+           padding: 0;
+           margin: 0; 
+        }
+        /* 内部样式 */
+        /* 标签选择器:选中页内所有该类标签 */
+        div{
+            width:200px;
+            height:200px;
+            border:2px solid red;
+        }
+        .inner{
+            width:200px;
+            height:200px;
+            line-height:100px; 
+            border:2px solid #000;
+            text-align: center;
+        }
+        .inner p{
+            font-style: oblique;
+        }
+        .nav>li{
+
+        }
+    </style>
+</head>
+<body>
+    <div style="width:100px;height:100px;">
+        行内样式
+    </div>
+    <div class="inner">
+        <p>内部样式</p>   
+    </div>
+    <div>
+        外联样式
+    </div>
+    <ul class="nav">
+        <li>
+            <p>首页</p>
+            <ul>
+                <li>111</li>
+                <li>111</li>
+                <li>111</li>
+            </ul>
+        </li>
+        <li>
+            <p>新闻</p>
+            <ul>
+                <li>111</li>
+                <li>111</li>
+                <li>111</li>
+            </ul>
+        </li>
+    </ul>
+</body>
+</html>

@@ -126,6 +126,52 @@
 
 
 
+## CSS(层叠样式表)
+
+### 使用方法
+
+- 行内样式（1000）
+- 外联样式
+- 内部样式
+
+### 基本选择器
+
+- 标签选择器（1）
+- 类选择器（class）（10）
+- id选择器（100）
+
+## 选择器优先级
+
+> id > 类选择器 > 标签选择器
+
+## 派生选择器
+
+- 包含选择器（后代选择器）
+- 子选择器
+- 通配符选择器
+
+## 字体样式
+
+- font-size
+- font-style : italic/oblique;
+- font-weight : bold/bolder;
+- font-family : "宋体"
+
+## 文本样式
+
+- text-align : center / left / right;
+- color : red;
+- text-indent : 2em;
+- line-height : 30px;
+
+## 背景样式
+
+- background-color
+- background-image : url( );
+- background-repeat : no-repeat;
+- background-position : 
+- background : red url() no-repeat 100px center;
+
 
 
 
