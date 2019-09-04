@@ -72,6 +72,58 @@
 
 
 
+```html
+表格
+<!-- border:设置表格的边框 -->
+    <!-- bordercolor:设置表格边框颜色 -->
+    <!-- cellspacing:设置单元格和单元格之间的距离 -->
+    <!-- cellpadding:设置单元格和内容之间的距离 -->
+    <!-- width/height:设置表格的宽度/高度 -->
+    <!-- align:设置表格对齐方式 -->
+    <!-- bgcolor:设置表格背景色 -->
+    <table bgcolor="" align="center" bordercolor="red" width="800" border="5" cellspacing="0" cellpadding="10">
+        <!-- align：写在tr或td上是设置文字对齐方式 -->
+        
+        <!-- 列合并（写在td或th上）：colspan -->
+        <!-- 行合并（写在td或th上）：rowspan -->
+        <tr>
+            <th colspan="4">商品类目</th>
+        </tr>
+        <tr align="center">
+            <td rowspan="3">移动</td>
+            <td>移动</td>
+            <td>移动</td>
+            <td>移动</td>
+        </tr>
+        <tr>
+            <td>移动</td>
+            <td>移动</td>
+            <td>移动</td>
+        </tr>
+        <tr>
+            <td>移动</td>
+            <td>移动</td>
+            <td>移动</td>
+        </tr>
+        <tr>
+            <td rowspan="3">移动</td>
+            <td>移动</td>
+            <td>移动</td>
+            <td>移动</td>
+        </tr>
+        <tr>
+            <td>移动</td>
+            <td>移动</td>
+            <td>移动</td>
+        </tr>
+        <tr>
+            <td>移动</td>
+            <td>移动</td>
+            <td>移动</td>
+        </tr>
+    </table>
+```
+
 
 
 
