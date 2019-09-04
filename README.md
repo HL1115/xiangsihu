@@ -166,7 +166,7 @@
 
 ## 背景样式
 
-- background-color
+- background-color : #ccc;
 - background-image : url( );
 - background-repeat : no-repeat;
 - background-position : 
