@@ -18,7 +18,7 @@
             line-height: 42px;
             background: #eee url(imgs/nav1.png) no-repeat 168px center ;
         }
-        .nav a:link{
+        /* .nav a:link{
             color: #000;
         }
         .nav a:visited{
@@ -29,12 +29,22 @@
         }
         .nav a:active{
             color: yellow;
+        } */
+        .nav li:hover{
+            background: #000;
+        }
+        .nav li:hover a{
+            color:#fff;
+            /* display:none; */
         }
         
     </style>
 </head>
 <body>
+    <!-- 字体样式：子元素可以继承父元素的样式 -->
+    <!-- a标签的字体颜色不能继承，a标签的字体颜色只能a标签加才有用 -->
     <ul class="nav">
+
         <li>
             <a href="">学科专业</a>
         </li>

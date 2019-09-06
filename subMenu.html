@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        /* 行内元素/块级元素 */
+        /* 行内元素：img/input/a/span */
+        /* a/span等行内元素不能设置宽高 */
+        /* 块级元素：div/ul/li/ol/p/form/table */
+        /* display:none/block/inline/inline-block */
+        .nav{
+            font-size: 0px;
+        }
+        .nav li{
+            display: inline-block;
+            width: 100px;
+            height: 30px;
+            font-size: 16px;
+            background: #ccc;
+            text-align: center;
+            line-height: 30px;
+        }
+    </style>
+</head>
+<body>
+    <!-- <span style="display:block;width:100px;background:red;">dd</span> -->
+    <ul class="nav">
+        <li>首页</li>
+        <li>
+            新闻
+            <ul>
+                <li>1111</li>
+                <li>2222</li>
+                <li>3333</li>
+            </ul>
+        </li>
+        <li>
+            地图
+            <ul>
+                <li>1111</li>
+                <li>2222</li>
+                <li>3333</li>
+            </ul>
+        </li>
+    </ul>
+</body>
+</html>
