@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>盒模型</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        /* 盒模型：width/height/border/margin/padding */
+        /* border-bottom */
+        /* .box{
+            width:100px;
+            height:100px;
+            border-bottom:2px solid red;
+            border-top:2px double yellow;
+            border-left:2px dotted green;
+            border-right:2px dashed yellow;
+            padding: 20px 50px 10px;
+            margin:100px auto;
+            
+        } */
+        body{
+            background-color: #aaa;
+        }
+        .box{
+            width: 1160px;
+            height: 60px;
+            padding: 20px;
+            font-size: 0px;
+            background-color: #fff;
+            margin: 100px auto;
+        }
+        .box div{
+            width: 230px;
+            height: 60px;
+            display: inline-block;
+            background-color: #ccc;
+            border-right:2px solid red;
+        }
+        .box .last{
+            border-right: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div class="last"></div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- <div class="box">
+        马上周末了，好开心！！！
+    </div>
+    <div class="box">
+        马上周末了，好开心！！！
+    </div> -->
+</body>
+</html>
