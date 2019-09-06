@@ -184,7 +184,32 @@
 - :hover 可用于任意标签（鼠标经过时）
 - :active（鼠标点击时）
 
+## 盒模型
 
+- width
+- height
+- border : 1px solid red;
+  - border-top
+  - border-right
+  - border-bottom
+  - border-left
+- margin(外边距：盒子之间的距离)
+  - margin-top
+  - margin-right
+  - margin-bottom
+  - margin-left
+- padding(内边距：盒子边缘与内容之间的距离)
+  - padding:10px；四个方向一样
+  - padding:20px 10px；上下 /  左右
+  - padding: 10px 20px 30px;上 / 左右 / 下
+  - padding: 10px 20px 30px 40px;上右下左
+
+## display:block/inline/inline-block/none;
+
+- block : 将元素转换成块级元素
+- inline : 将元素转换成行内元素
+- inline-block : 将元素转换成行内块元素
+- none : 元素不显示
 
 
 
