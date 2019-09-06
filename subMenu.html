@@ -4,6 +4,16 @@
     <meta charset="UTF-8">
     <title>Document</title>
     <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        li{
+            list-style: none;
+        }
+        a{
+            text-decoration: none;
+        }
         /* 行内元素/块级元素 */
         /* 行内元素：img/input/a/span */
         /* a/span等行内元素不能设置宽高 */
@@ -26,7 +36,14 @@
 <body>
     <!-- <span style="display:block;width:100px;background:red;">dd</span> -->
     <ul class="nav">
-        <li>首页</li>
+        <li>
+            首页
+            <ul>
+                <li>1111</li>
+                <li>2222</li>
+                <li>3333</li>
+            </ul>
+        </li>
         <li>
             新闻
             <ul>
