@@ -211,7 +211,18 @@
 - inline-block : 将元素转换成行内块元素
 - none : 元素不显示
 
+## 浮动(float)
 
+- 包裹性
+- 向上性
+- 不重叠
+
+## 定位（position）
+
+- position : fixed;(固定定位：相对于浏览器定位)
+- position : relative;(相对定位：相对于该元素自身所在的位置定位)
+- position : absolute;(绝对定位：相对于该元素有定位属性的父元素去定位，如果父元素都没定位属性，相对于body定位)
+- position : static;(不定位)
 
 
 
