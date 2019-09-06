@@ -22,8 +22,9 @@
         .nav{
             font-size: 0px;
         }
-        .nav li{
+        .nav>li{
             display: inline-block;
+            vertical-align: top;
             width: 100px;
             height: 30px;
             font-size: 16px;
@@ -31,30 +32,43 @@
             text-align: center;
             line-height: 30px;
         }
+        .subNav{
+            display: none;
+        }
+        .nav li:hover .subNav{
+            display: block;
+        }
+        .subNav{
+            border:1px solid lightblue;
+        }
+        .subNav li:hover{
+            color:#fff;
+            background-color: lightblue;
+        }
     </style>
 </head>
 <body>
     <!-- <span style="display:block;width:100px;background:red;">dd</span> -->
     <ul class="nav">
         <li>
-            首页
-            <ul>
+            <a href="">首页</a>   
+            <ul class="subNav">
                 <li>1111</li>
                 <li>2222</li>
                 <li>3333</li>
             </ul>
         </li>
         <li>
-            新闻
-            <ul>
+            <a href="">新闻</a>  
+            <ul class="subNav">
                 <li>1111</li>
                 <li>2222</li>
                 <li>3333</li>
             </ul>
         </li>
         <li>
-            地图
-            <ul>
+            <a href="">地图</a>  
+            <ul class="subNav">
                 <li>1111</li>
                 <li>2222</li>
                 <li>3333</li>
