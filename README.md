@@ -14,14 +14,14 @@
 
 ```html
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Document</title>
-</head>
-<body>
+<html>
+	<head>
+    	<meta charset="UTF-8">
+    	<title>Document</title>
+	</head>
+	<body>
     
-</body>
+	</body>
 </html>
 ```
 
@@ -48,7 +48,8 @@
         <li></li>
     </ol>
     <!-- 布局 division-->
-    <div></div>
+    <div></div><!--块级元素-->
+	<span></span><!--行内元素-->
     <!-- 表单 -->
     <form action="" method="get">
         <!-- 表单元素 -->
@@ -67,6 +68,10 @@
         <input type="checkbox" name="course" value="">
         <input type="submit" value="登录">
         <input type="button" value="按钮">
+        <select name="sel">
+            <option value="beijing">北京</option>
+        </select>
+        <textarea></textarea>
     </form>
 ```
 
@@ -74,7 +79,7 @@
 
 ```html
 表格
-<!-- border:设置表格的边框 -->
+	<!-- border:设置表格的边框 -->
     <!-- bordercolor:设置表格边框颜色 -->
     <!-- cellspacing:设置单元格和单元格之间的距离 -->
     <!-- cellpadding:设置单元格和内容之间的距离 -->
@@ -148,6 +153,8 @@
 
 - 包含选择器（后代选择器）
 - 子选择器
+- 群组选择器
+- 属性选择器
 - 通配符选择器
 
 ## 字体样式
@@ -223,6 +230,24 @@
 - position : relative;(相对定位：相对于该元素自身所在的位置定位)
 - position : absolute;(绝对定位：相对于该元素有定位属性的父元素去定位，如果父元素都没定位属性，相对于body定位)
 - position : static;(不定位)
+
+## overflow(溢出处理)
+
+- hidden（溢出隐藏）
+- scroll（出现滚动条）
+- auto（自动）
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
