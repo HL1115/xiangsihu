@@ -9,12 +9,56 @@ li,ul,ol{
 a{
     text-decoration: none;
 }
+.w1200{
+    width: 1200px;
+    margin: 0 auto;
+}
 /* header样式 */
 .headerwrap{
-    background-color: #1a1a1a;
+    background-color: #333;
+    overflow: hidden;
 }
 .header{
-    width: 1200px;
     height: 45px;
-    margin: 0 auto;
+}
+.header p{
+    float: right;
+    color: #fff;
+    font-size: 14px;
+    line-height: 45px;
+}
+.header span{
+    font-size: 20px;
+    margin-right:24px;
+}
+.header img{
+    margin-top: 11px;
+    float: left; 
+    margin-right: 12px;
+    /* vertical-align: top; */
+}
+.header a{
+    color: #fff;
+    margin: 0 16px;
+}
+/* nav */
+.nav{
+    height: 80px;
+    background-color: #ccc;
+}
+.nav p{
+    float: right;
+    line-height: 80px;
+}
+.nav a{
+    float: left;
+    width: 100px;
+    font-size: 20px;
+    color: #000;
+    margin-right: 20px;
+    text-align: center;
+    height: 76px;
+}
+.nav a:hover{
+    border-bottom: 4px solid #e8420a;
 }
