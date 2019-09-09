@@ -231,6 +231,10 @@
 - position : absolute;(绝对定位：相对于该元素有定位属性的父元素去定位，如果父元素都没定位属性，相对于body定位)
 - position : static;(不定位)
 
+## 层叠上下文
+
+- z-index : 999;
+
 ## overflow(溢出处理)
 
 - hidden（溢出隐藏）
