@@ -44,7 +44,6 @@ a{
 /* nav */
 .nav{
     height: 80px;
-    background-color: #ccc;
 }
 .nav p{
     float: right;
@@ -59,6 +58,32 @@ a{
     text-align: center;
     height: 76px;
 }
+/* 伪类选择器 */
+.nav a:last-child{
+    margin-right: 0;
+}
 .nav a:hover{
     border-bottom: 4px solid #e8420a;
 }
+/* 伪元素 */
+/* div:after{
+
+}
+div:before{
+
+} */
+/* main */
+.mainwrap{
+    height: 720px;
+    background-color: #f5f5f5;
+}
+.bread{
+    line-height: 100px;
+}
+.bread a+a:before{
+    content:">";
+    margin-left:10px;
+}
+/* .bread a:last-child:after{
+    content:"";
+} */
