@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>javascript</title>
+    <script>
+        // var flag = true;
+        // console.log(typeof flag);
+        // var u;
+        // console.log(u);
+        // console.log(typeof u);
+        // var score = 93;
+        // 求这是一年中的第几天？
+        var year = 2019,
+            mon = 9,
+            day = 9,
+            sum = 0;
+        switch(true){
+            case mon>11:
+                sum += 30;
+            case mon>10:
+                sum += 31;
+            case mon>9:
+                sum += 30;
+            case mon>8:
+                sum += 31;
+            case mon>7:
+                sum += 31;
+            case mon>6:
+                sum += 30;
+            case mon>5:
+                sum += 31;
+            case mon>4:
+                sum += 30;
+            case mon>3:
+                sum += 31;
+            case mon>2:
+                sum += ((year%4==0&&year%100!==0)||year%400==0)?29:28
+                // if((year%4==0&&year%100!==0)||year%400==0){
+                //     sum += 29;
+                // }else{
+                //     sum += 28;
+                // }
+            case mon>1:
+                sum += 31;
+            default:
+                sum += day;
+        }
+        console.log(sum);
+        // 短路操作
+        90>60&&console.log('及格');
+
+        console.log(10<5&&100);
+        // switch(true){
+        //     case score>=90:
+        //         console.log('优');
+        //         break;
+        //     case score>=80:
+        //         console.log('良');
+        //         break;
+        //     default :
+        //         console.log('不及格');
+        // }
+        
+        // if(score>=90){
+        //     console.log('优');
+        // }
+
+        // 逻辑运算符
+        // if(score>=80&&score<90){
+        //     console.log('优');
+        // }
+
+        // if(score>=90){
+        //     console.log('优');
+        // }else if(score>=80){
+        //     console.log('良');
+        // }else if(score>70){
+        //     console.log('中');
+        // }else if(score>=60){
+        //     console.log('及格');
+        // }else{
+        //     console.log('不及格');
+        // }
+
+        // 循环语句
+    </script>
+    <script src=""></script>
+</head>
+<body>
+    
+</body>
+</html>

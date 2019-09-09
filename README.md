@@ -244,7 +244,37 @@
 
 
 
+# JavaScript
 
+## 简介
+
+> 基于对象和事件驱动的脚本语言
+>
+> 动态、弱类型
+
+## 基础语法
+
+```javascript
+//声明变量
+var num = 10;
+//基本数据类型
+//Number、String、Boolean、Undefined、Null
+var flag = true;
+var str = 'abcd';
+var num = 100;
+console.log(typeof flag);//boolean
+console.log(typeof str);//string
+console.log(typeof num);//number
+var u;
+console.log(typeof u);//undefined
+//运算符
++=   %=    ?:  && || !
+//流程控制语句
+//顺序结构   分支结构  循环结构
+if(10>2){
+   console.log(true);
+}
+```
 
 
 
