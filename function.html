@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>function</title>
+    <script>
+        // document.write('<h1 style="color:red;">hello world</h1>');
+        // 函数声明
+            // 函数名以英文字母或$开头，不能是关键字
+        // function fn(){
+        //     console.log(100);
+        // }
+        // var f = function(){
+        //     console.log('这是f函数');
+        // }
+        // 函数的调用（函数+小括号调用）
+        // fn();
+        // fn();
+        // f();
+        // function printTable(row,col){
+        //     // var row = 3,col = 5;
+        //     document.write('<table width="100" border="1">');
+        //     for(var i=0;i<row;i++){
+        //         document.write('<tr>');
+        //         for(var j=0;j<col;j++){
+        //             document.write('<td>'+j+'</td>');
+        //         }
+        //         document.write('</tr>');
+        //     }
+        //     document.write('</table>');
+        // }
+        // printTable(3,5);
+        // printTable(7,8);
+        // 函数的参数(函数声明时是形参，调用时是实参)
+        // 函数的返回值(返回一个值，或直接跳出整个函数)
+        // 函数return后没有值，函数也有返回值，是undefined
+        // 函数如果没有return语句，也有返回值，是undefined
+        // function sum(a,b){
+        //     return a+b;
+        // }
+        // console.log( sum(1,5) );
+        // alert( sum(10,20) );
+        // function sum(a,b){
+        //     if(a>b){
+        //         return;
+        //     }
+        //     var all = 0;
+        //     for(var i=a;i<=b;i++){
+        //         all += i;
+        //     }
+        //     return all;
+        // }   
+        // console.log( sum(10,4) );
+        // function evenSum(a,b){
+        //     if(a>b){
+        //         return;
+        //     }
+        //     var all = 0;
+        //     for(var i=a;i<=b;i++){
+        //         i%2===0&&(all += i);
+        //     }
+        //     return all;
+        // }   
+        // console.log( evenSum(1,4) );
+        function isPrime(a){
+            for(var i=2;i<a;i++){
+                if(a%i==0){
+                    return false;
+                }
+            }
+            return true;
+        }
+        function primeSum(a,b){
+            var sum = 0;
+            for(var i=a;i<=b;i++){
+                isPrime(i)&&(sum += i);
+            }
+            return sum;
+        }
+        console.log( primeSum(2,7) );
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
