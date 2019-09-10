@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Object</title>
+    <script>
+        // var name = '潘俊龙';
+        // var age = 18;
+        // var height = 180;
+        // var weight = 80;
+        // function say(){
+        //     console.log('我很帅');
+        // }
+
+        // 对象的声明(一系列属性和方法的集合)
+        var obj = {
+            name:'潘',
+            age:18,
+            height:180,
+            say:function(){
+                console.log('我老师很帅');
+            }
+        };
+        // 对象的访问
+        console.log(obj.name);
+        console.log(obj['name']);
+        obj.say();
+        // 添加属性或方法
+        obj.weight = 80;
+        // 修改
+        obj.name = '潘帅帅';
+        console.log(obj);
+        // 删除属性
+        delete obj.name;
+        // 遍历(for in 循环)
+        for(var item in obj){
+            if(typeof obj[item] !== "function"){
+                document.write(obj[item]+'<br>');
+            }
+        }
+
+        // var obj = new Object();
+        
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

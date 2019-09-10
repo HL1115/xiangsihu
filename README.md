@@ -257,6 +257,19 @@
 ```javascript
 //声明变量
 var num = 10;
+//全局变量（声明在所有函数之外的变量）
+//局部变量（函数内部，通过var声明的变量）
+//在函数外部不能访问函数内的局部变量
+//函数内可以访问全局变量
+		var num = 199;
+        function a(){
+            num = num + 100;
+            var sum = 100;
+            console.log(sum);//100
+        }
+        a();
+        console.log(num);//299
+        console.log(sum);//报错
 //基本数据类型
 //Number、String、Boolean、Undefined、Null
 var flag = true;
