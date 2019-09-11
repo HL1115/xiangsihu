@@ -48,18 +48,20 @@
     </div>
     <button id="btn">练习事件绑定</button>
     <script>
+        // 先获取到要操作的元素
         var lis = document.getElementById('nav').children;
         var divs = document.getElementsByClassName('box')[0].children;
-        
         for(var i=0;i<lis.length;i++){
+            // 给节点对象添加一个属性，赋值为下标
             lis[i].index = i;
+            // 分别给每一个li绑定点击事件
             lis[i].onclick = function(){
+                // 隐藏3个div
                 for(var i=0;i<lis.length;i++){
                     divs[i].style.display = 'none';
                 }
+                // 对应的div显示
                 divs[this.index].style.display = 'block';
-
-
 
                 // console.log(this.innerHTML)
                 // this.innerHTML = 'nav'+this.index;

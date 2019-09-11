@@ -13,12 +13,13 @@
         // }
 
         // 对象的声明(一系列属性和方法的集合)
+        // this是调用当前方法的对象
         var obj = {
             name:'潘',
             age:18,
             height:180,
             say:function(){
-                console.log('我老师很帅');
+                console.log(this.name)
             }
         };
         // 对象的访问
