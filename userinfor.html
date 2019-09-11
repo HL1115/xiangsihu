@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>DOM</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        li{
+            list-style: none;
+        }
+        #nav{
+            width: 1000px;
+            height: 50px;
+            border: 1px solid #ccc;
+            margin: 0 auto;
+        }
+        #nav li{
+            width: 80px;
+            height: 50px;
+            text-align: center;
+            line-height: 50px;
+            float: left;
+            cursor: pointer;
+        }
+        .box{
+            width: 1000px;
+            height: 500px;
+            margin: 0 auto;
+            border: 1px solid red;
+        }
+        .box div{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <ul id="nav">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+    <div class="box">
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+    </div>
+    <script>
+        function get(id){
+            return document.getElementById(id);
+        }
+        var arr = [
+            {
+                name:'张三',
+                age:21,
+                weight:50,
+                height:150
+            },
+            {
+                name:'张三',
+                age:22,
+                weight:70,
+                height:160
+            },
+            {
+                name:'张三',
+                age:23,
+                weight:80,
+                height:170
+            },
+            {
+                name:'张三4',
+                age:24,
+                weight:90,
+                height:180
+            },
+            {
+                name:'张三5',
+                age:27,
+                weight:60,
+                height:190
+            }
+        ];
+        var lis = get('nav').children;
+        var box = document.getElementsByClassName('box')[0];
+        for(var i=0;i<5;i++){
+            lis[i].innerHTML = arr[i].name;
+            lis[i].index = i;
+            // 点击每一个li
+            lis[i].onclick = function(){
+                // 使box里的内容是对应li里的名字
+                box.children[0].innerHTML = arr[this.index].name;
+                box.children[1].innerHTML = arr[this.index].age;
+                box.children[2].innerHTML = arr[this.index].height;
+                box.children[3].innerHTML = arr[this.index].weight;
+            }
+        }
+
+    </script>
+</body>
+</html>

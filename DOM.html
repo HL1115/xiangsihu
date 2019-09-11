@@ -40,33 +40,154 @@
         <li>我的关注</li>
         <li>推荐</li>
         <li>导航</li>
+        <li>导航2</li>
+        <li>导航3</li>
+        <li>导航4</li>
+        <li>导航5</li>
+        <li>导航6</li>
+        <li>导航7</li>
+        <li>导航8</li>
     </ul>
     <div class="box">
         <div>我的关注的内容</div>
         <div style="display: block;">推荐的内容</div>
         <div>导航的内容</div>
+        <div>导航的内容2</div>
+        <div>导航的内容3</div>
+        <div>导航的内容4</div>
+        <div>导航的内容5</div>
+        <div>导航的内容6</div>
+        <div>导航的内容7</div>
+        <div>导航的内容8</div>
     </div>
     <button id="btn">练习事件绑定</button>
     <script>
-        // 先获取到要操作的元素
-        var lis = document.getElementById('nav').children;
-        var divs = document.getElementsByClassName('box')[0].children;
-        for(var i=0;i<lis.length;i++){
-            // 给节点对象添加一个属性，赋值为下标
-            lis[i].index = i;
-            // 分别给每一个li绑定点击事件
-            lis[i].onclick = function(){
-                // 隐藏3个div
-                for(var i=0;i<lis.length;i++){
-                    divs[i].style.display = 'none';
-                }
-                // 对应的div显示
-                divs[this.index].style.display = 'block';
 
-                // console.log(this.innerHTML)
-                // this.innerHTML = 'nav'+this.index;
-            }
-        }
+
+
+
+
+
+        
+        var str = `梁方圆
+李宪文
+覃荟卉
+庞鑫
+罗壬力
+唐伟明
+杨钧全
+龙冠雄
+曹英豪
+蓝宇
+黄冠博
+刘帅
+张思芸
+赖文卓
+欧军
+李汉峰
+蓝伟格
+包仕富
+卢华巨
+潘俊龙
+丘云祥
+任朝锐
+苏成林
+蒋雄杰
+莫凡浩
+梁敏杰
+黄瑞生
+陆启扇
+丁海峰
+李金醒
+莫培文
+潘冠瑾
+韦树冲
+黎天敏
+班琳
+李念
+韦荣崎
+蒙家文
+李锦清
+周鹏超
+付彩玉
+黄筵淞
+蒙伟明
+梁月娥
+许先漂
+许政坤
+欧大偲
+郑庆
+李德鑫
+蓝剑源
+李金辉
+黄凤仪
+管培嘉
+庞礼民
+农昊
+曾海祥
+陈福桔
+陈柯宇
+黄熠
+黄奇锐
+杨志鑫
+黄贤才
+陆海琦
+许文怡
+韦雨欣
+梁昱
+陈旻昊
+吴乐裕
+刘育辰
+谢沛明
+黄国庆
+宁一健
+吴文韬
+黄志勇
+龚鸿炜
+李文龙
+农建磊
+黄珺雄
+黄文轩
+刘可凡
+黄颉
+唐洁
+陈铭豪
+李婉菊
+陈柳延
+黄良勇
+陆师
+尤朗
+梁永杰
+陆保哲
+吴元豪
+孙珂`;
+        // var arr = str.split('\n');
+        // console.log(arr);
+
+
+
+
+
+        // 先获取到要操作的元素
+        // var lis = document.getElementById('nav').children;
+        // var divs = document.getElementsByClassName('box')[0].children;
+        // console.dir(lis[0]);
+        // for(var i=0;i<lis.length;i++){
+        //     // 给节点对象添加一个属性，赋值为下标
+        //     lis[i].index = i;
+        //     // 分别给每一个li绑定点击事件
+        //     lis[i].onclick = function(){
+        //         // 隐藏3个div
+        //         for(var i=0;i<lis.length;i++){
+        //             divs[i].style.display = 'none';
+        //         }
+        //         // 对应的div显示
+        //         divs[this.index].style.display = 'block';
+
+        //         // console.log(this.innerHTML)
+        //         // this.innerHTML = 'nav'+this.index;
+        //     }
+        // }
 
 
 
