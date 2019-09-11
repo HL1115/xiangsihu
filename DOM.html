@@ -24,6 +24,15 @@
             line-height: 50px;
             float: left;
         }
+        .box{
+            width: 1000px;
+            height: 500px;
+            margin: 0 auto;
+            border: 1px solid red;
+        }
+        .box div{
+            display: none;
+        }
     </style>
 </head>
 <body>
@@ -32,8 +41,33 @@
         <li>推荐</li>
         <li>导航</li>
     </ul>
+    <div class="box">
+        <div>我的关注的内容</div>
+        <div style="display: block;">推荐的内容</div>
+        <div>导航的内容</div>
+    </div>
     <button id="btn">练习事件绑定</button>
     <script>
+        var lis = document.getElementById('nav').children;
+        var divs = document.getElementsByClassName('box')[0].children;
+        
+        for(var i=0;i<lis.length;i++){
+            lis[i].index = i;
+            lis[i].onclick = function(){
+                for(var i=0;i<lis.length;i++){
+                    divs[i].style.display = 'none';
+                }
+                divs[this.index].style.display = 'block';
+
+
+
+                // console.log(this.innerHTML)
+                // this.innerHTML = 'nav'+this.index;
+            }
+        }
+
+
+
 
 
         // 事件类型：onclick  onmouseover onmouseout
