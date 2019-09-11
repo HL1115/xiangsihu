@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>DOM</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        li{
+            list-style: none;
+        }
+        #nav{
+            width: 1000px;
+            height: 50px;
+            border: 1px solid #ccc;
+            margin: 0 auto;
+        }
+        #nav li{
+            width: 80px;
+            height: 50px;
+            text-align: center;
+            line-height: 50px;
+            float: left;
+        }
+    </style>
+</head>
+<body>
+    <ul id="nav">
+        <li>我的关注</li>
+        <li>推荐</li>
+        <li>导航</li>
+    </ul>
+    <button id="btn">练习事件绑定</button>
+    <script>
+
+
+        // 事件类型：onclick  onmouseover onmouseout
+        // onmousemove onmouseup onmousedown
+        // 绑定事件
+        // 三要素：绑定的元素、事件类型、事件处理函数
+        
+        var btn = document.getElementById('btn');
+        btn.onclick = function(){
+            console.log('onclick');
+        }
+        btn.onmouseover = function(){
+            this.style.background = 'red';
+        }
+        btn.onmouseout = function(){
+            this.style.background = '#fff';
+        }
+        btn.onmousemove = function(){
+            console.log('onmousemove');
+        }
+
+
+
+        // DOM(document object model：文档对象模型)
+        // DOM 树
+        // 节点类型：文本节点  元素节点  属性节点
+
+        // 获取元素
+        // document.getElementById();
+        // document.getElementsByClassName();
+        // document.getElementsByTagName();
+        // var nav = document.getElementById('nav');
+        // console.log(nav);
+        // var lis = document.getElementsByTagName('li');
+        // console.log(lis[0]);
+        // 通过节点关系获取
+
+        // console.log(nav.childNodes);
+        // console.log(nav.children);
+        // console.log(nav.parentNode);
+        // console.log(nav.firstElementChild.nextElementSibling);
+
+
+    </script>
+</body>
+</html>
