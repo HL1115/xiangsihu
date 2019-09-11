@@ -98,7 +98,7 @@
             lis[i].index = i;
             // 点击每一个li
             lis[i].onclick = function(){
-                // 使box里的内容是对应li里的名字
+                // 使box里的p标签内容是对应li里人的信息
                 box.children[0].innerHTML = arr[this.index].name;
                 box.children[1].innerHTML = arr[this.index].age;
                 box.children[2].innerHTML = arr[this.index].height;

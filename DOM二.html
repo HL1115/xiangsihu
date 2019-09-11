@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>节点操作</title>
+</head>
+<body>
+    <input id="msg" type="text">
+    <ul id="list">
+        <li>111</li>
+        <li>222</li>
+        <li>333</li>
+    </ul>
+    <script>
+        // 1、先获取要操作的标签
+        var inp = document.getElementById('msg');
+        var list = document.getElementById('list');
+        // 2、给input绑定键盘事件
+        // 键盘事件：onkeydown   onkeyup
+        inp.onkeydown = function(e){
+            // 判断是否是回车键
+            if(e.keyCode===13){
+                // 创建一个li标签
+                var li = document.createElement('li');
+                // 给li里赋值成input框输入的内容
+                li.innerHTML = inp.value;
+                // 添加到指定的元素里
+                list.appendChild(li);
+                li.onclick = function(){
+                    list.removeChild(this);
+                }
+                inp.value = '';
+                // ul中添加一个li标签
+                // list.innerHTML += '<li>'+inp.value+'</li>';
+            }
+        }
+        // 先获取li
+        var lis = list.children;
+        // 给li绑定点击事件
+        for(var i=0;i<lis.length;i++){
+            lis[i].onclick = function(){
+                list.removeChild(this);
+            }
+        }
+    </script>
+</body>
+</html>
