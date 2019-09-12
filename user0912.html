@@ -42,36 +42,89 @@
             border: 1px solid red;
         }
     </style>
-    <script src="js/data.js"></script>
 </head>
 <body>
-<div class="header">
-    <button id="prev"><</button>
-    <ul id="nav">
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-    </ul>
-    <button id="next">></button>
-</div>
-    
-    <div class="box">
-        <p></p>
+    <div class="header">
+        <button id="prev"><</button>
+        <ul id="nav">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+        <button id="next">></button>
+    </div>
+    <div id="box" class="box">
         <p></p>
         <p></p>
         <p></p>
     </div>
+
+    <script src="js/data.js"></script>
     <script>
-        
-        
-        
+        // 1、获取相关元素
+        var prev = get('prev'),
+            lis = get('nav').children,
+            next = get('next'),
+            ps = get('box').children,
+            page = 0;
+        // 2、初始在li中渲染前10个姓名
+        for(var i=0;i<10;i++){
+            lis[i].index = i;
+            lis[i].innerHTML = data[i].name;
+            // 3、给每个li绑定点击事件
+            lis[i].onclick = function(){
+                ps[0].innerHTML = data[page+this.index].name;
+                ps[1].innerHTML = data[page+this.index].age;
+                ps[2].innerHTML = data[page+this.index].xuehao;
+            }
+        }
+        // 4、给左右button绑定点击事件
+        // 右箭头事件
+        next.onclick = function(){
+            // 页数+10
+            page += 10;
+            if(page>data.length){
+                page -= 10;
+                return;
+            }
+            if(page===parseInt(data.length/10)*10){
+                for(var i=0;i<data.length%10;i++){
+                    lis[i].innerHTML = data[i+page].name;
+                }
+                for(var i=data.length%10;i<10;i++){
+                    lis[i].innerHTML = '';
+                }
+            }else{
+                // 十个li的内容变成当前页的
+                for(var i=0;i<10;i++){
+                    lis[i].innerHTML = data[i+page].name;
+                }
+            }
+            // box里的内容是当前页的第一个人的
+            ps[0].innerHTML = data[page].name;
+            ps[1].innerHTML = data[page].age;
+            ps[2].innerHTML = data[page].xuehao;
+        }
+        // 左箭头事件
+        prev.onclick = function(){
+            if(page == 0){
+                return;
+            }
+            page -= 10;
+            for(var i=0;i<10;i++){
+                lis[i].innerHTML = data[i+page].name;
+            }
+            ps[0].innerHTML = data[page].name;
+            ps[1].innerHTML = data[page].age;
+            ps[2].innerHTML = data[page].xuehao;
+        }
     </script>
 </body>
 </html>
