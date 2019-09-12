@@ -91,4 +91,19 @@ var str = `梁方圆
 陆保哲
 吴元豪
 孙珂`;
+function get(id){
+    return document.getElementById(id);
+}
+function log(msg){
+    console.log(msg)
+}
 var arr = str.split('\n');
+var data = [];
+for(var i=0;i<arr.length;i++){
+    data.push({
+        name:arr[i],
+        age: 15+parseInt(Math.random()*10),
+        xuehao: 123456789+parseInt(Math.random()*123456789),
+    })
+}
+log(data);
