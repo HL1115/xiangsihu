@@ -250,7 +250,17 @@
 
 > 基于对象和事件驱动的脚本语言
 >
-> 动态、弱类型
+> 特点：动态（声明时无需指定变量类型）、
+>
+> ​            弱类型（可以给变量赋值成任意类型）
+>
+> javascript包括：
+>
+> ​	ECMAscript(基本语法)
+>
+> ​	DOM（文档对象模型）
+>
+> ​	BOM（浏览器对象模型）
 
 ## 基础语法
 
@@ -286,10 +296,209 @@ console.log(typeof u);//undefined
 //顺序结构   分支结构  循环结构
 if(10>2){
    console.log(true);
+}else{
+    
+}
+switch(){
+       case :
+          break;
+}
+//循环结构
+for(){
 }
 ```
 
+## 函数
 
+```javascript
+// 函数声明
+        // 函数名以英文字母或$开头，不能是关键字
+        // function fn(){
+        //     console.log(100);
+        // }
+        // var f = function(){
+        //     console.log('这是f函数');
+        // }
+// 函数的调用（函数+小括号调用）
+        // fn();
+// 函数的参数(函数声明时是形参，调用时是实参)
+// 函数的返回值(返回一个值，或直接跳出整个函数)
+        // 函数return后没有值，函数也有返回值，是undefined
+        // 函数如果没有return语句，也有返回值，是undefined
+        // function sum(a,b){
+        //     return a+b;
+        // }
+        // console.log( sum(1,5) );
+```
+
+## 对象
+
+```javascript
+
+        // 对象的声明(一系列属性和方法的集合)
+        // this是调用当前方法的对象
+        var obj = {
+            name:'潘',
+            age:18,
+            height:180,
+            say:function(){
+                console.log(this.name)
+            }
+        };
+        // 对象的访问
+        console.log(obj.name);
+        console.log(obj['name']);
+        obj.say();
+        // 添加属性或方法
+        obj.weight = 80;
+        // 修改
+        obj.name = '潘帅帅';
+        console.log(obj);
+        // 删除属性
+        delete obj.name;
+        // 遍历(for in 循环)
+        for(var item in obj){
+            if(typeof obj[item] !== "function"){
+                document.write(obj[item]+'<br>');
+            }
+        }
+```
+
+## 数组和字符串
+
+```javascript
+// 数组的声明
+        var arr = [1,2,3,4,5];
+        // 数组的访问
+        // console.log(arr[0]);
+        // 数组的方法
+        // push:在数组末尾添加元素，并返回数组的长度；
+        // var newArr = arr.push(3,4,5);
+        // console.log(newArr);
+        // console.log(arr);
+        // pop:删除数组末尾的元素，并返回删除的元素
+        // var ele = arr.pop();
+        // console.log(ele,arr);
+        // arr.shift   arr.unshift
+        // splice：从某一位开始删，删除几个，在该位添加
+        // var ele = arr.splice(1,0,100,90);
+        // console.log(arr,ele);
+        // arr.indexOf()：返回该元素的下标索引，如果不存在返回-1。
+        // 数组的去重
+        // var arr = [1,2,3,2,4,3,3,2,5,6,2];
+        // var newArr = [];
+        // for(var i=0;i<arr.length;i++){
+        //     if(newArr.indexOf(arr[i])==-1){
+        //         newArr.push(arr[i]);
+        //     }
+        // }
+        // console.log(newArr);
+
+        // for(var i=0;i<arr.length-1;i++){
+        //     for(var j=i+1;j<arr.length;j++){
+        //         if(arr[i]===arr[j]){
+        //             arr.splice(j,1);
+        //             j--;
+        //         }
+        //     }
+        // }
+        // console.log(arr);
+        // 数组的排序
+        // 冒泡排序
+        // console.time('a')
+        // var arr = [1,2,3,2,9,4,6,3,90,67,5];
+        // for(var i=0;i<arr.length-1;i++){
+        //     for(var j=0;j<arr.length-i-1;j++){
+        //         if(arr[j]>arr[j+1]){
+        //             var temp = arr[j];
+        //             arr[j] = arr[j+1];
+        //             arr[j+1] = temp;
+        //         }
+        //     }
+        // }
+        // console.log(arr);
+        // console.timeEnd('a');
+        // 选择排序
+        // var arr = [1,2,3,2,9,4,6,3,90,67,5];
+        // for(var i=0;i<arr.length-1;i++){
+        //     for(var j=i+1;j<arr.length;j++){
+        //         if(arr[i]>arr[j]){
+        //             var temp = arr[i];
+        //             arr[i] = arr[j];
+        //             arr[j] = temp;
+        //         }
+        //     }
+        // }
+        // console.log(arr);
+```
+
+## DOM（文档对象模型）
+
+```javascript
+// DOM(document object model：文档对象模型)
+        // DOM 树
+        // 节点类型：文本节点  元素节点  属性节点
+
+        // 获取元素
+        // document.getElementById();
+        // document.getElementsByClassName();
+        // document.getElementsByTagName();
+        // var nav = document.getElementById('nav');
+        // console.log(nav);
+        // var lis = document.getElementsByTagName('li');
+        // console.log(lis[0]);
+        // 通过节点关系获取
+
+        // console.log(nav.childNodes);
+        // console.log(nav.children);
+        // console.log(nav.parentNode);
+        // 			  console.log(nav.firstElementChild.nextElementSibling);
+// 事件类型：onclick  onmouseover onmouseout
+        // onmousemove onmouseup onmousedown
+        // 绑定事件
+        // 三要素：绑定的元素、事件类型、事件处理函数
+
+//节点的创建和删除
+       // 1、先获取要操作的标签
+        var inp = document.getElementById('msg');
+        var list = document.getElementById('list');
+        // 2、给input绑定键盘事件
+        // 键盘事件：onkeydown   onkeyup
+        inp.onkeydown = function(e){
+            // 判断是否是回车键
+            if(e.keyCode===13){
+                // 创建一个li标签
+                var li = document.createElement('li');
+                // 给li里赋值成input框输入的内容
+                li.innerHTML = inp.value;
+                // 添加到指定的元素里
+                list.appendChild(li);
+                li.onclick = function(){
+                    list.removeChild(this);
+                }
+                inp.value = '';
+                // ul中添加一个li标签
+                // list.innerHTML += '<li>'+inp.value+'</li>';
+            }
+        }
+        // 先获取li
+        var lis = list.children;
+        // 给li绑定点击事件
+        for(var i=0;i<lis.length;i++){
+            lis[i].onclick = function(){
+                list.removeChild(this);
+            }
+        }
+//事件流：事件冒泡、事件捕获
+//利用事件冒泡的特性，可以实现事件委托（即当需要给子元素绑定事件的时候，给父元素绑）
+//阻止事件冒泡：e.stopPropagation();
+```
+
+## BOM(浏览器对象模型)
+
+```javascript
+
+```
 
 
 

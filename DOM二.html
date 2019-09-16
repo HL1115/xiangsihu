@@ -7,7 +7,7 @@
 <body>
     <input id="msg" type="text">
     <ul id="list">
-        <li>111</li>
+        <li>111<button>删除</button></li>
         <li>222</li>
         <li>333</li>
     </ul>
@@ -22,24 +22,44 @@
             if(e.keyCode===13){
                 // 创建一个li标签
                 var li = document.createElement('li');
+                // var btn = document.createElement('button');
                 // 给li里赋值成input框输入的内容
-                li.innerHTML = inp.value;
+                li.innerHTML = inp.value+'<button>删除</button>';
+                // btn.innerHTML = '删除';
                 // 添加到指定的元素里
                 list.appendChild(li);
-                li.onclick = function(){
-                    list.removeChild(this);
-                }
+                // li.appendChild(btn);
                 inp.value = '';
                 // ul中添加一个li标签
                 // list.innerHTML += '<li>'+inp.value+'</li>';
             }
         }
+        // 事件流：事件冒泡  事件捕获
+        // 
+
+
+
+
+        
+        
+        
+        
         // 先获取li
         var lis = list.children;
         // 给li绑定点击事件
-        for(var i=0;i<lis.length;i++){
-            lis[i].onclick = function(){
-                list.removeChild(this);
+        // for(var i=0;i<lis.length;i++){
+            // lis[i].onclick = function(e){
+                // 阻止事件冒泡
+                // e.stopPropagation();
+                // list.removeChild(this);
+                // console.log('li点击了');
+            // }
+        // }
+        // 事件委托
+        list.onclick = function(e){
+            // console.log('ul被点击了');
+            if(e.target.nodeName == 'BUTTON'){
+                list.removeChild(e.target.parentNode);
             }
         }
     </script>
