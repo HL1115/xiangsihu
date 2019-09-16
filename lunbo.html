@@ -17,7 +17,7 @@
             position: relative;
         }
         #slide{
-            width: 1320px;
+            width: 2320px;
             position: absolute;
         }
         #slide img{
@@ -30,29 +30,37 @@
 <body>
     <div id="box">
         <div id="slide">
-            <img src="http://www.gxun.edu.cn/images/17/05/15/1bi6wypw9p/yyy.jpg" alt="">
-            <img src="http://www.gxun.edu.cn/images/17/05/15/1bi6wypw9p/yyy.jpg" alt="">
-            <img src="http://www.gxun.edu.cn/images/17/05/15/1bi6wypw9p/yyy.jpg" alt="">
-            <img src="http://www.gxun.edu.cn/images/17/05/15/1bi6wypw9p/yyy.jpg" alt="">
-            <img src="http://www.gxun.edu.cn/images/17/05/15/1bi6wypw9p/yyy.jpg" alt="">
-            <img src="http://www.gxun.edu.cn/images/17/05/15/1bi6wypw9p/yyy.jpg" alt="">
+            <img src="http://www.gxun.edu.cn/images/xslj.jpg" alt="">
+            <img src="http://www.gxun.edu.cn/images/17/05/15/1xut7t9vm8/gx_36.png" alt="">
+            <img src="http://www.gxun.edu.cn/images/17/05/15/1xut7t9vm8/gx_34.png" alt="">
+            <img src="http://www.gxun.edu.cn/images/17/05/15/1xut7t9vm8/gx_32.png" alt="">
+            <img src="http://www.gxun.edu.cn/images/timg123.jpg" alt="">
+            <img src="http://www.gxun.edu.cn/images/ethniclaw.jpg" alt="">
+            <img src="http://www.gxun.edu.cn/images/xslj.jpg" alt="">
+            <img src="http://www.gxun.edu.cn/images/17/05/15/1xut7t9vm8/gx_36.png" alt="">
+            <img src="http://www.gxun.edu.cn/images/17/05/15/1xut7t9vm8/gx_34.png" alt="">
+            <img src="http://www.gxun.edu.cn/images/17/05/15/1xut7t9vm8/gx_32.png" alt="">
         </div>
     </div>
     <script>
         var slide = document.getElementById('slide');
         var box = document.getElementById('box');
         var i = 0;
-        var id = setInterval(function(){
-            slide.style.left = i-- + 'px';
-        },50);
+        function move(){
+            if(i<=-1320){
+                i=0;
+            }else{
+                i--;
+            }
+            slide.style.left = i + 'px';
+        }
+        var id = setInterval(move,10);
 
         box.onmouseover = function(){
             clearInterval(id);
         }
         box.onmouseout = function(){
-            id = setInterval(function(){
-                slide.style.left = i-- + 'px';
-            },50);
+            id = setInterval(move,10);
         }
     </script>
 </body>
