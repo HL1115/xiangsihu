@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>BOM</title>
+    <script>
+        // window对象是最根上的对象
+        // console.log(window);
+        // window对象下的方法
+        // alert();
+        // var a = 100;//声明的变量是加到window对象上的属性
+        // console.log(window.a);
+        window.onload = function(){
+            var btn = document.getElementById('btn');
+            var stop = document.getElementById('stop');
+            var id;
+            btn.onclick = function(){
+                // var flag = confirm('你确定要放弃H5吗');
+                // console.log(flag);
+                // 打开指定网址的窗口
+                // var win = open('https://www.baidu.com/');
+                // 延迟执行
+                // setTimeout(function(){
+                //     win.close();
+                // },3000)
+                var i = 16;
+                // 周期执行
+                id = setInterval(function(){
+                    // console.log(i++);
+                    // btn.style.fontSize = i++ + 'px';
+                    btn.style.marginLeft = i++ + 'px';
+                },50);
+            }
+            stop.onclick = function(){
+                // 清除定时器
+                clearInterval(id);
+            }
+        }
+    </script>
+</head>
+<body>
+    <button id="btn">开始</button>
+    <button id="stop">停止</button>
+</body>
+</html>

@@ -496,11 +496,25 @@ for(){
 
 ## BOM(浏览器对象模型)
 
-```javascript
+#### window对象下的方法
 
-```
+- alert()
+- confirm()
+- close()
+- open()
+- setInterval()
+- setTimeout()
+- clearInterval()
+- clearTimeout()
+- onload
 
+#### window下的对象
 
+- history
+- location
+- screen
+- navigator
+- document
 
 
 

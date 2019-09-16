@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>轮播图</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        #box{
+            width: 800px;
+            height: 120px;
+            border: 3px solid red;
+            margin: 0 auto;
+            overflow: hidden;
+            position: relative;
+        }
+        #slide{
+            width: 1320px;
+            position: absolute;
+        }
+        #slide img{
+            width: 200px;
+            float: left;
+            margin-right: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div id="box">
+        <div id="slide">
+            <img src="http://www.gxun.edu.cn/images/17/05/15/1bi6wypw9p/yyy.jpg" alt="">
+            <img src="http://www.gxun.edu.cn/images/17/05/15/1bi6wypw9p/yyy.jpg" alt="">
+            <img src="http://www.gxun.edu.cn/images/17/05/15/1bi6wypw9p/yyy.jpg" alt="">
+            <img src="http://www.gxun.edu.cn/images/17/05/15/1bi6wypw9p/yyy.jpg" alt="">
+            <img src="http://www.gxun.edu.cn/images/17/05/15/1bi6wypw9p/yyy.jpg" alt="">
+            <img src="http://www.gxun.edu.cn/images/17/05/15/1bi6wypw9p/yyy.jpg" alt="">
+        </div>
+    </div>
+    <script>
+        var slide = document.getElementById('slide');
+        var box = document.getElementById('box');
+        var i = 0;
+        var id = setInterval(function(){
+            slide.style.left = i-- + 'px';
+        },50);
+
+        box.onmouseover = function(){
+            clearInterval(id);
+        }
+        box.onmouseout = function(){
+            id = setInterval(function(){
+                slide.style.left = i-- + 'px';
+            },50);
+        }
+    </script>
+</body>
+</html>
