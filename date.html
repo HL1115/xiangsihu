@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Date</title>
+    <script>
+        // 构造函数
+        // Object  Array  String
+        // var d = new Date();
+        // console.log(d.toLocaleString());
+    </script>
+</head>
+<body>
+    <div id="box">2019/9/16 下午3:13:37</div>
+    <script>
+        var box = document.getElementById('box');    
+        setInterval(function(){
+            var d = new Date();
+            box.innerHTML = d.toLocaleString();
+        },1000)
+    </script>
+</body>
+</html>
