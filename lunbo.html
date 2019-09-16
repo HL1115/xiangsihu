@@ -47,15 +47,15 @@
         var box = document.getElementById('box');
         var i = 0;
         function move(){
-            if(i<=-1320){
-                i=0;
-            }else{
-                i--;
-            }
+            // if(i<=-1320){
+            //     i=0;
+            // }else{
+            //     i--;
+            // }
+            i = i<=-1320?0:i-1;
             slide.style.left = i + 'px';
         }
         var id = setInterval(move,10);
-
         box.onmouseover = function(){
             clearInterval(id);
         }
