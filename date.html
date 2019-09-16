@@ -5,6 +5,12 @@
     <title>Date</title>
     <script>
         // 构造函数
+        function Person(name,age){
+            this.name = name;
+            this.age = age;
+        }
+        var obj = new Person('lili',20);
+        console.log(obj);
         // Object  Array  String
         // var d = new Date();
         // console.log(d.toLocaleString());
@@ -14,10 +20,28 @@
     <div id="box">2019/9/16 下午3:13:37</div>
     <script>
         var box = document.getElementById('box');    
-        setInterval(function(){
-            var d = new Date();
-            box.innerHTML = d.toLocaleString();
-        },1000)
+        var d1 = new Date('2017-9-19');
+        d1.setHours(14);
+        // setInterval(function(){
+            // var d2 = new Date();
+            // console.log(d2.getTime());
+
+
+            // var day = parseInt((d2-d1)/1000/60/60/24);
+            // var hours = parseInt((d2-d1)/1000/60/60%24);
+            // console.log(day+'-'+hours);
+        // },1000)
+
+        // setInterval(function(){
+            // var d = new Date();
+            // var mon = d.getMonth();
+            // var day = d.getDay();
+            // var h = d.getHours();
+            // var m = d.getMinutes();
+            // var s = d.getSeconds();
+            // box.innerHTML = mon+'--'+day+'--'+h+'--'+m+'--'+s
+            // box.innerHTML = d.toLocaleString();
+        // },1000)
     </script>
 </body>
 </html>

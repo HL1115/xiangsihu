@@ -511,9 +511,23 @@ for(){
 #### window下的对象
 
 - history
+  - back()
+  - forward()
+  - go()
 - location
+  - hash
+  - search
+  - port
+  - host
+  - href
 - screen
+  - width
+  - height
+  - availHeight
+  - availWidth
 - navigator
+  - userAgent
+  - appVersion
 - document
 
 
