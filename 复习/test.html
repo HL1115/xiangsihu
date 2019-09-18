@@ -43,6 +43,30 @@
         .navBar .next{
             float: right;
         }
+        .nav{
+            float: left;
+            margin-left: 550px;
+            margin-top: 23px;
+        }
+        .nav li{
+            list-style: none;
+            background: #fff; 
+            margin-right: 10px;  
+            text-align: center;
+            line-height: 30px;
+            border-radius: 50%;
+            width: 30px;
+            height: 30px;
+            float: left;
+        }
+        /* .nav li:first-child{
+            background: blue;
+            color: #fff;
+        } */
+        .nav .active{
+            background: blue;
+            color: #fff;
+        }
     </style>
 </head>
 <body>
@@ -59,6 +83,16 @@
         </div>
         <div class="navBar">
             <span class="prev"><</span>
+            <ul class="nav">
+                <li class="active">1</li>
+                <li>2</li>
+                <li>3</li>
+                <li>4</li>
+                <li>5</li>
+                <li>6</li>
+                <li>7</li>
+                <li>8</li>
+            </ul>
             <span class="next">></span>
         </div>
     </div>
@@ -68,14 +102,22 @@
         var box = document.getElementsByClassName('box')[0];
         var imgs = box.children[0].children;
         var next = document.getElementsByClassName('next')[0];
-        console.log(next);
+        var prev = document.getElementsByClassName('prev')[0];
+        var lis = document.getElementsByClassName('nav')[0].children;
         var i = 0;
         // 2、自动轮播
         function move(){
             imgs[i].style.display = 'none';
+            lis[i].className = '';
+            // lis[i].style.background = '#fff';
+            // lis[i].style.color = '#000';
             i++;
             i===8 && (i = 0);
             imgs[i].style.display = 'block';
+            lis[i].className = 'active';
+            // lis[i].style.background = 'blue';
+            // lis[i].style.color = '#fff';
+
         }
         var id = setInterval(move,500);
         // 3、鼠标划入清定时器
@@ -87,8 +129,13 @@
             id = setInterval(move,500);
         }
         // 5、右箭头点击事件
-        next.onclick = function(){
-            move();
+        next.onclick = move;
+        // 6、左箭头点击事件
+        prev.onclick = function(){
+            imgs[i].style.display = 'none';
+            i--;
+            i===-1 && (i=7);
+            imgs[i].style.display = 'block';
         }
     </script>
 </body>
