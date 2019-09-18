@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>lunbo</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        .box{
+            width: 1200px;
+            height: 397px;
+            border: 3px solid red;
+            margin: 100px auto;
+            position: relative;
+            /* overflow: hidden; */
+        }
+        .box img{
+            width: 1200px;
+            height: 397px;
+            display: none;
+        }
+        .navBar{
+            width: 1002px;
+            height: 73px;
+            background: url(img/bg.png);
+            position: absolute;
+            bottom: 0;
+            left: 99px;
+        }
+        .navBar span{
+            width: 30px;
+            height: 73px;
+            float: left;
+            text-align: center;
+            line-height: 73px;
+            font-size: 30px;
+            color: #fff;
+            background-color: red;
+        }
+        .navBar .next{
+            float: right;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="slide">
+            <img style="display:block;" src="img/img0.gif" alt="">
+            <img src="img/img1.jpg" alt="">
+            <img src="img/img2.jpg" alt="">
+            <img src="img/img3.jpg" alt="">
+            <img src="img/img4.jpg" alt="">
+            <img src="img/img5.jpg" alt="">
+            <img src="img/img6.jpg" alt="">
+            <img src="img/img7.jpg" alt="">
+        </div>
+        <div class="navBar">
+            <span class="prev"><</span>
+            <span class="next">></span>
+        </div>
+    </div>
+    <script>
+        // 1、获取相关元素（看清你的标签的结构关系）
+        // var box = document.getElementById('box');
+        var box = document.getElementsByClassName('box')[0];
+        var imgs = box.children[0].children;
+        var i = 0;
+        // 2、自动轮播
+        function move(){
+            imgs[i].style.display = 'none';
+            i++;
+            i===8 && (i = 0);
+            imgs[i].style.display = 'block';
+        }
+        var id = setInterval(move,500);
+        // 3、鼠标划入清定时器
+        box.onmouseover = function(){
+            clearInterval(id);
+        }
+        // 4、鼠标划出开定时器
+        box.onmouseout = function(){
+            id = setInterval(move,500);
+        }
+    </script>
+</body>
+</html>
