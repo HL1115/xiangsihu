@@ -32,6 +32,7 @@
         .navBar span{
             width: 30px;
             height: 73px;
+            user-select:none;
             float: left;
             text-align: center;
             line-height: 73px;
@@ -49,6 +50,7 @@
             margin-top: 23px;
         }
         .nav li{
+            user-select:none;
             list-style: none;
             background: #fff; 
             margin-right: 10px;  
@@ -133,9 +135,27 @@
         // 6、左箭头点击事件
         prev.onclick = function(){
             imgs[i].style.display = 'none';
+            lis[i].className = '';
             i--;
             i===-1 && (i=7);
             imgs[i].style.display = 'block';
+            lis[i].className = 'active';
+        }
+        // 7、给每个li绑定点击事件
+        for(var j=0;j<lis.length;j++){
+            lis[j].index = j;
+            // lis[j].onselectstart = function(e){
+            //     e.preventDefault();
+            // }
+            lis[j].onclick = function(e){
+                console.dir(this)
+                imgs[i].style.display = 'none';
+                lis[i].className = '';
+                i = this.index;
+                imgs[i].style.display = 'block';
+                lis[i].className = 'active';
+            }
+
         }
     </script>
 </body>
