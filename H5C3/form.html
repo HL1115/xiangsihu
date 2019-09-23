@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>form</title>
+    <style>
+        input{
+            outline: none;
+        }
+    </style>
+</head>
+<body>
+    <!-- <form action="http://aaa.jsp">
+        <input  type="number" name="demoNum"  min="1" max="100" step="2"/>
+        <input  type="email"  name="email" placeholder="请输入邮箱"  />
+        <input  type="url" name="url"  placeholder= "输入正确的网址" />
+        <input type="submit">
+    </form> -->
+    <form oninput="sum.value=parseInt(a.value)+(isNaN(parseInt(b.value))?0:parseInt(b.value))" action="http://aaa.jsp">
+        <input onblur="this.style.border='1px solid #ccc'" onfocus="this.style.border='2px solid red'" type="text" name='a'>+
+        <input type="text" name='b'>=
+        <output name="sum"></output>
+
+        <!-- <input name="city" autocomplete="on" type="search" list="lis" />
+        <datalist id="lis">
+            <option value="北京"></option>
+            <option value="上海"></option>
+            <option value="南宁"></option>
+        </datalist> -->
+        <input type="submit">
+    </form>
+    <script>
+        // NaN：not a number
+    </script>
+</body>
+</html>
