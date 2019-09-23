@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>storage</title>
+</head>
+<body>
+
+    <script>
+        var arr = {name:123};
+        localStorage.setItem('name',JSON.stringify(arr));
+        var obj = JSON.parse(localStorage.getItem('name'));
+        console.log(obj);
+        // localStorage.setItem('name','zhangsan');
+    </script>
+</body>
+</html>
