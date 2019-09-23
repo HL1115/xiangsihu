@@ -10,12 +10,13 @@
     </style>
 </head>
 <body>
-    <!-- <form action="http://aaa.jsp">
+    <form id="fo" action="http://aaa.jsp">
+        <input type="text" required>
         <input  type="number" name="demoNum"  min="1" max="100" step="2"/>
         <input  type="email"  name="email" placeholder="请输入邮箱"  />
-        <input  type="url" name="url"  placeholder= "输入正确的网址" />
         <input type="submit">
-    </form> -->
+    </form>
+    <input form="fo"  type="url" name="url"  placeholder= "输入正确的网址" /> 
     <form oninput="sum.value=parseInt(a.value)+(isNaN(parseInt(b.value))?0:parseInt(b.value))" action="http://aaa.jsp">
         <input onblur="this.style.border='1px solid #ccc'" onfocus="this.style.border='2px solid red'" type="text" name='a'>+
         <input type="text" name='b'>=
@@ -31,6 +32,13 @@
     </form>
     <script>
         // NaN：not a number
+        // isNaN():当传入的不是一个数字时，返回true
+        
+        // 表单：
+        // 1、input的type属性的属性值
+        // 2、表单元素
+        // 3、新增属性：required、placeholder
+
     </script>
 </body>
 </html>
