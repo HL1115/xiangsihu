@@ -7,11 +7,29 @@
         input{
             outline: none;
         }
+        #file{
+            display: none;
+        }
+        .file{
+            width: 80px;
+            height: 30px;
+            display: block;
+            background: red;
+            color: #fff;
+            text-align: center;
+            line-height: 30px;
+            border-radius: 15px;
+        }
     </style>
 </head>
 <body>
     <form id="fo" action="http://aaa.jsp">
-        <input type="text" required>
+        <fieldset>
+            <legend>基本情况</legend>
+            <label class="file" for="file">上传文件</label>
+            <input id="file" type="file" multiple>
+            <label for="user">姓名：</label><input id="user" autofocus type="text" required>
+        </fieldset>
         <input  type="number" name="demoNum"  min="1" max="100" step="2"/>
         <input  type="email"  name="email" placeholder="请输入邮箱"  />
         <input type="submit">
