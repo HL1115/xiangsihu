@@ -30,6 +30,7 @@
             left: 99px;
         }
         .navBar span{
+            display: none;
             width: 30px;
             height: 73px;
             user-select:none;
@@ -125,10 +126,14 @@
         // 3、鼠标划入清定时器
         box.onmouseover = function(){
             clearInterval(id);
+            prev.style.display = 'block';
+            next.style.display = 'block';
         }
         // 4、鼠标划出开定时器
         box.onmouseout = function(){
             id = setInterval(move,500);
+            prev.style.display = 'none';
+            next.style.display = 'none';
         }
         // 5、右箭头点击事件
         next.onclick = move;

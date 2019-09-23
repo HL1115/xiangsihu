@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>多媒体元素</title>
+</head>
+<body>
+    <!-- 行内元素/块级元素 -->
+    <div>
+        <audio id="aud" autoplay src="media/2.ogg" loop></audio>
+        <button id="btn">暂停</button>
+    </div>
+    <video autoplay src="media/1.ogg" controls></video>
+    <script>
+        var btn = document.getElementById('btn');
+        var aud = document.getElementById('aud');
+        var flag = true;//设置一个标志；
+        btn.onclick = function(){
+            if(flag){
+                aud.pause();
+                btn.innerHTML = '开始';
+            }else{
+                aud.play();
+                btn.innerHTML = '暂停';
+            }
+            flag = !flag;
+        }
+    </script>
+</body>
+</html>
