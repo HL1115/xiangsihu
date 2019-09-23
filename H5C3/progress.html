@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>progress</title>
+</head>
+<body>
+    <form action="http://aaa.jsp">
+        <input  type="number" name="demoNum"  min="1" max="100" step="2"/>
+        <input  type="email"  name="email" placeholder="请输入邮箱"  />
+        <input  type="url" name="url"  placeholder= "输入正确的网址" />
+
+        <input type="submit">
+    </form>
+    <progress id="pro" value="10" max="100"></progress>
+    <script>
+        var pro = document.getElementById('pro');
+        var id = setInterval(function(){
+            pro.value++;
+            if(pro.value===100){
+                clearInterval(id);
+                alert('太难了');
+            }
+        },100);
+    </script>
+</body>
+</html>
