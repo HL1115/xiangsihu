@@ -3,9 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <title>多媒体元素</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        #music{
+            position: fixed;
+            right: 0;
+            top: 0;
+        }
+    </style>
 </head>
 <body>
     <!-- 行内元素/块级元素 -->
+    <img id="music" src="media/imgs/on.png" alt="">
     <div>
         <audio id="aud" autoplay src="media/2.ogg" loop></audio>
         <button id="btn">暂停</button>
@@ -14,17 +26,33 @@
     <script>
         var btn = document.getElementById('btn');
         var aud = document.getElementById('aud');
-        var flag = true;//设置一个标志；
-        btn.onclick = function(){
-            if(flag){
-                aud.pause();
-                btn.innerHTML = '开始';
-            }else{
+        var music = document.getElementById('music');
+        music.onclick = function(){
+            if(aud.paused){
                 aud.play();
-                btn.innerHTML = '暂停';
+                this.src = 'media/imgs/on.png';
+            }else{
+                aud.pause();
+                this.src = 'media/imgs/off.png';
+
             }
-            flag = !flag;
         }
+
+
+
+
+        // var flag = true;//设置一个标志；
+
+        // btn.onclick = function(){
+        //     if(flag){
+        //         aud.pause();
+        //         btn.innerHTML = '开始';
+        //     }else{
+        //         aud.play();
+        //         btn.innerHTML = '暂停';
+        //     }
+        //     flag = !flag;
+        // }
     </script>
 </body>
 </html>
