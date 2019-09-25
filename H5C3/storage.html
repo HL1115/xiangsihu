@@ -5,12 +5,40 @@
     <title>storage</title>
 </head>
 <body>
+    <input type="text" required id="inp">
+    <ul id="list">
 
+    </ul>
     <script>
-        var arr = {name:123};
-        localStorage.setItem('name',JSON.stringify(arr));
-        var obj = JSON.parse(localStorage.getItem('name'));
-        console.log(obj);
+        var inp = document.getElementById('inp');
+        var list = document.getElementById('list');
+        if(localStorage.getItem('data')){
+            var todo = localStorage.getItem('data');
+            var arr = JSON.parse(todo);
+        }else{
+            var arr = [];
+        }
+        for(var i=0;i<arr.length;i++){
+            list.innerHTML += '<li>'+arr[i]+'</li>'
+        }
+        inp.onkeydown = function(e){
+            if(e.keyCode === 13){
+                arr.push(inp.value);
+                localStorage.setItem('data',JSON.stringify(arr));
+                list.innerHTML += '<li>'+inp.value+'</li>'
+            }
+        }
+
+
+
+
+
+
+
+        // var arr = {name:123};
+        // localStorage.setItem('name',JSON.stringify(arr));
+        // var obj = JSON.parse(localStorage.getItem('name'));
+        // console.log(obj);
         // localStorage.setItem('name','zhangsan');
     </script>
 </body>
