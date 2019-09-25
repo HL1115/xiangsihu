@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>file</title>
+</head>
+<body>
+    <input id="file" multiple type="file">
+    <button id="btn">上传文件</button>
+    <ul id="msg">
+        <li></li>
+        <li></li>
+    </ul>
+    <script>
+        // var file = document.querySelector('#file');
+        var file = document.getElementById('file');
+        var btn = document.getElementById('btn');
+        var msg = document.getElementById('msg');
+        btn.onclick = function(){
+            var reader = new FileReader();
+            reader.readAsText(file.files[0]);
+            // reader.readAsDataUrl(file.files[0]);
+            reader.onload = function(){
+                console.log(reader.result)
+                // msg.children[0].innerHTML = '<img src="'+this.result+'">'
+            }
+
+
+
+            // for(var i=0;i<file.files.length;i++){
+            //     // if(!/image/.test(file.files[i].type)){
+            //     if(file.files[i].type.indexOf('image')===-1){
+            //         alert('文件格式不对');
+            //         return;
+            //     }
+
+            // }
+            // alert('上传成功');
+        }
+
+        // 异步
+        // 同步
+        // console.log(1);
+        // console.log(2);
+        // alert(3);
+        // setTimeout(function(){
+        //     console.log(4);
+        // },3000)
+        // console.log(5);
+    </script>
+</body>
+</html>

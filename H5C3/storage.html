@@ -6,7 +6,7 @@
 </head>
 <body>
     <input type="text" required id="inp">
-    <h2>未完成</h2>
+    <h2>未完成<span id="num">0</span></h2>
     <ul id="list">
 
     </ul>
@@ -36,6 +36,7 @@
         inp.onkeydown = function(e){
             if(e.keyCode === 13){
                 arr.push(inp.value);
+                num.innerHTML = arr.length;
                 localStorage.setItem('data',JSON.stringify(arr));
                 list.innerHTML += '<li><input type="checkbox">'+inp.value+'<button>删除</button></li>'
             }
@@ -44,6 +45,7 @@
             if(e.target.nodeName==='INPUT'){
                 var idx = e.target.parentNode.getAttribute('index');
                 var last = arr.splice(idx,1)[0];
+                num.innerHTML = arr.length;
                 arr1.push(last);
                 // list.removeChild(e.target.parentNode);
                 init();
