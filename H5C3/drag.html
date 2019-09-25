@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>drag and drop</title>
+    <style>
+        #box{
+            width: 300px;
+            height: 300px;
+            border: 3px solid red;
+        }
+    </style>
+</head>
+<body>
+    <img id="img" src="media/imgs/on.png" alt="">
+    <div id="box"></div>
+    <script>
+        var img = document.getElementById('img');
+        var box = document.getElementById('box');
+        img.ondragstart = function(e){
+            e.dataTransfer.setData('text',this.id);
+        }
+        box.ondragover = function(e){
+            e.preventDefault();
+        }
+        box.ondrop = function(e){
+            var txt = e.dataTransfer.getData('text');
+            box.appendChild(document.getElementById(txt));
+            // img.parentNode.removeChild(img);
+            // box.innerHTML += '<img src="'+txt+'">';
+        }
+    </script>
+</body>
+</html>
