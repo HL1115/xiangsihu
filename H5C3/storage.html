@@ -26,9 +26,13 @@
             var arr = [];
             var arr1 = [];
         }
-        for(var i=0;i<arr.length;i++){
-            list.innerHTML += '<li index='+i+'><input type="checkbox">'+arr[i]+'<button>删除</button></li>'
+        function init(){
+            list.innerHTML = '';
+            for(var i=0;i<arr.length;i++){
+                list.innerHTML += '<li index='+i+'><input type="checkbox">'+arr[i]+'<button>删除</button></li>'
+            }
         }
+        init();
         inp.onkeydown = function(e){
             if(e.keyCode === 13){
                 arr.push(inp.value);
@@ -41,11 +45,14 @@
                 var idx = e.target.parentNode.getAttribute('index');
                 var last = arr.splice(idx,1)[0];
                 arr1.push(last);
-                list.removeChild(e.target.parentNode);
+                // list.removeChild(e.target.parentNode);
+                init();
                 com.innerHTML += '<li><input checked type="checkbox">'+last+'<button>删除</button></li>'
             }
             if(e.target.nodeName==='BUTTON'){
-
+                var idx = e.target.parentNode.getAttribute('index');
+                var last = arr.splice(idx,1)[0];
+                init();
             }
         }
 
