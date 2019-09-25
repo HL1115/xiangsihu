@@ -6,29 +6,48 @@
 </head>
 <body>
     <input type="text" required id="inp">
+    <h2>未完成</h2>
     <ul id="list">
+
+    </ul>
+    <h2>已完成</h2>
+    <ul id="com">
 
     </ul>
     <script>
         var inp = document.getElementById('inp');
         var list = document.getElementById('list');
+        var com = document.getElementById('com');
         if(localStorage.getItem('data')){
             var todo = localStorage.getItem('data');
             var arr = JSON.parse(todo);
+            var arr1 = [];
         }else{
             var arr = [];
+            var arr1 = [];
         }
         for(var i=0;i<arr.length;i++){
-            list.innerHTML += '<li>'+arr[i]+'</li>'
+            list.innerHTML += '<li index='+i+'><input type="checkbox">'+arr[i]+'<button>删除</button></li>'
         }
         inp.onkeydown = function(e){
             if(e.keyCode === 13){
                 arr.push(inp.value);
                 localStorage.setItem('data',JSON.stringify(arr));
-                list.innerHTML += '<li>'+inp.value+'</li>'
+                list.innerHTML += '<li><input type="checkbox">'+inp.value+'<button>删除</button></li>'
             }
         }
+        list.onclick = function(e){
+            if(e.target.nodeName==='INPUT'){
+                var idx = e.target.parentNode.getAttribute('index');
+                var last = arr.splice(idx,1)[0];
+                arr1.push(last);
+                list.removeChild(e.target.parentNode);
+                com.innerHTML += '<li><input checked type="checkbox">'+last+'<button>删除</button></li>'
+            }
+            if(e.target.nodeName==='BUTTON'){
 
+            }
+        }
 
 
 
