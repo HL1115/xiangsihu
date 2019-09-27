@@ -8,6 +8,7 @@
             border: 1px solid red;
             display: block;
             margin: 0 auto;
+            background-color: #ccc;
         }
     </style>
 </head>
@@ -16,13 +17,54 @@
     <script>
         var can = document.getElementById('can');
         var cxt = can.getContext('2d');
-        cxt.moveTo(200,200);
-        cxt.lineTo(400,200);
-        cxt.lineTo(300,300);
-        cxt.lineTo(200,200);
-        cxt.strokeStyle = 'red';
-        cxt.stroke();
-        cxt.fill();
+
+        // cxt.arc(250,250,100,0.5*Math.PI,1.5*Math.PI,true)
+        // cxt.fillStyle = '#fff';
+        // cxt.fill();
+        // cxt.beginPath()
+        // cxt.arc(250,250,100,0.5*Math.PI,1.5*Math.PI)
+        // cxt.fillStyle = '#000';
+        // cxt.fill();
+        // cxt.closePath();
+
+        // cxt.beginPath()
+        // cxt.arc(250,200,50,0,2*Math.PI)
+        // cxt.fillStyle = '#fff';
+        // cxt.fill();
+        // cxt.closePath();
+
+        // cxt.beginPath()
+        // cxt.arc(250,300,50,0,2*Math.PI)
+        // cxt.fillStyle = '#000';
+        // cxt.fill();
+        // cxt.closePath();
+
+        // cxt.beginPath()
+        // cxt.arc(250,300,5,0,2*Math.PI)
+        // cxt.fillStyle = '#fff';
+        // cxt.fill();
+        // cxt.closePath();
+
+        // cxt.beginPath()
+        // cxt.arc(250,200,5,0,2*Math.PI)
+        // cxt.fillStyle = '#000';
+        // cxt.fill();
+        // cxt.closePath();
+        // cxt.moveTo(200,200);
+        // cxt.lineTo(400,200);
+        // cxt.lineTo(300,300);
+        // cxt.lineTo(200,200);
+        // cxt.strokeStyle = 'red';
+        // cxt.stroke();
+        // cxt.fillStyle = 'yellow';
+        // cxt.fill();
+        cxt.fillRect(100,100,100,100);
+        window.onkeydown = function(e){
+            if(e.keyCode == 39){
+                cxt.clearRect(0,0,500,500);
+                cxt.fillRect(110,100,100,100);
+            }
+        }
     </script>
 </body>
 </html>
