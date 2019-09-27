@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>test2</title>
+</head>
+<body>
+    <script>
+        // 1声明一个函数
+        function sayName(){
+            console.log('hello world');
+        }
+        var sayName = function(){}
+        // 2声明一个对象
+        var obj = {
+            name:'hello',
+            age:20
+        }
+        // 3遍历2题对象
+        // for(var i in obj){
+        //     document.write(obj[i]);
+        // }
+        // 4数组的方法
+        // push   末尾添加
+        // pop    末尾删除
+        // splice 在任意位置删除或添加
+        // indexOf查询元素
+        // slice  截取数组
+        // shift  开头删除
+        // unshift开头添加
+        // 5绑定键盘事件
+        // <input type="text" id="txt">
+        // var txt = document.getElementById('txt');
+        // txt.onkeydown = function(e){
+        //     if(e.keyCode===13){
+        //         console.log(txt.value);
+        //     }
+        // }  
+        // 6文件上传
+        // <input type="file" id="file">
+        // <button id="btn">上传</button>
+        // var file = document.getElementById('file');
+        // var btn = document.getElementById('btn');
+        // btn.onclick = function(){
+        //     var reader = new FileReader();
+        //     reader.readAsDataURL(file.files[0]);
+        //     reader.onload = function(){
+        //         document.body += '<img src='+this.result+'>'
+        //     }
+        // }
+        // 7拖放
+        // drag  drop  dataTransfer
+    </script>
+</body>
+</html>
