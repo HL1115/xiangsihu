@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>canvas</title>
+    <style>
+        canvas{
+            border: 1px solid red;
+            display: block;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+    <canvas width="500" height="500" id="can"></canvas>
+    <script>
+        var can = document.getElementById('can');
+        var cxt = can.getContext('2d');
+        cxt.moveTo(200,200);
+        cxt.lineTo(400,200);
+        cxt.lineTo(300,300);
+        cxt.lineTo(200,200);
+        cxt.strokeStyle = 'red';
+        cxt.stroke();
+        cxt.fill();
+    </script>
+</body>
+</html>
