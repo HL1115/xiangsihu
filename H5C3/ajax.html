@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ajax</title>
+</head>
+<body>
+    <button></button>
+    <script>
+        // https://api.apiopen.top/musicRankings
+        // ajax
+        // 1创建请求的对象
+        var xhr = new XMLHttpRequest();
+        // 2发送请求
+        xhr.open('get','https://api.apiopen.top/musicRankings',true);
+        xhr.send();
+        // 3、监听状态
+        xhr.onreadystatechange = function(){
+            if(xhr.readyState==4&&xhr.status==200){
+                var data = JSON.parse(xhr.responseText);
+                console.log(data);
+            }
+        }
+        console.log(111);
+
+
+
+
+
+    </script>
+</body>
+</html>
