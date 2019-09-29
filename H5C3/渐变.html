@@ -12,23 +12,33 @@
             position: absolute;
             top: 50%;
             left: 50%;
+            transform: skew(50deg);
             /* margin: -50px 0 0 -50px; */
-            /* transform: translate(-50%,-50%); */
+            transform: translate(-50%,-50%);
         }
         .box img{
             transition: 1s;
             width: 100%;
             height: 100%;
         }
-        .box:hover img{
+        /* .box:hover img{
             transform: scale(1.5,1.5);
-            /* transform: rotateZ(50deg); */
-        }
+            transform: rotateZ(50deg);
+        } */
     </style>
 </head>
 <body>
-    <div class="box">
+    <div id="box" class="box">
         <img src="media/imgs/on.png" alt="">
     </div>
+    <script>
+        // 1获取节点
+        // var box = document.getElementById('box');
+        // var img = box.children[0];
+        // 2绑定划入事件
+        // box.onmouseover = function(){
+        //     img.style.transform = 'scale(1.5,1.5)';
+        // }
+    </script>
 </body>
 </html>

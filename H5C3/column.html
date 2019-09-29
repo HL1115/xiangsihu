@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>column</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        ul,li,ol{
+            list-style: none;
+        }
+        .box{
+            width: 100%;
+            height: 500px;
+            overflow: hidden;
+            position: relative;
+        }
+        .slide{
+            width: 500%;
+            height: 500px;
+            position: absolute;
+            animation: move 10s 2s infinite;
+        }
+        .slide li{
+            float: left;
+            width: 20%;
+            height: 450px;
+        }
+        .slide li:nth-child(1){
+            background: url(media/imgs/banner.jpg) no-repeat center;
+        }
+        .slide li:nth-child(2){
+            background: url(media/imgs/banner1.jpg) no-repeat center;
+        }
+        .slide li:nth-child(3){
+            background: url(media/imgs/banner.jpg) no-repeat center;
+        }
+        .slide li:nth-child(4){
+            background: url(media/imgs/banner1.jpg) no-repeat center;
+        }
+        .slide li:nth-child(5){
+            background: url(media/imgs/banner.jpg) no-repeat center;
+        }
+        @keyframes move{
+            0%{
+                left: 0;
+            }
+            10%{
+                left: -100%;
+            }
+            20%{
+                left: -100%;
+            }
+            30%{
+                left: -200%;
+            }
+            40%{
+                left: -200%;
+            }
+            50%{
+                left: -300%;
+            }
+            60%{
+                left: -300%;
+            }
+            70%{
+                left: -400%;
+            }
+            80%{
+                left: -400%;
+            }
+            /* 70%{
+                left: -400%;
+            }
+            70%{
+                left: -400%;
+            } */
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <ul class="slide">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </div>
+</body>
+</html>
