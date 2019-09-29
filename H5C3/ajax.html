@@ -5,11 +5,14 @@
     <title>ajax</title>
 </head>
 <body>
-    <button></button>
+    <ul id="list">
+
+    </ul>
     <script>
         // https://api.apiopen.top/musicRankings
         // ajax
         // 1创建请求的对象
+        var list = document.getElementById('list');
         var xhr = new XMLHttpRequest();
         // 2发送请求
         xhr.open('get','https://api.apiopen.top/musicRankings',true);
@@ -19,6 +22,9 @@
             if(xhr.readyState==4&&xhr.status==200){
                 var data = JSON.parse(xhr.responseText);
                 console.log(data);
+                for(var i=0;i<data.result.length;i++){
+                    list.innerHTML += '<li>'+data.result[i].name+'<img src='+data.result[i].pic_s210+'></li>';
+                }
             }
         }
         console.log(111);
