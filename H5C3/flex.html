@@ -10,35 +10,45 @@
             clear: both;
         }
         .box{
-            width: 1200px;
-            /* height: 600px; */
+            /* width: 1200px; */
+            height: 600px;
             margin: 0 auto;
             border: 3px solid red;
-            /* display: flex; */
+            display: flex;
             /* flex-direction: column; */
-            /* flex-wrap: wrap; */
-            /* justify-content: space-between; */
+            flex-wrap: wrap;
+            justify-content: space-between;
             /* align-items: stretch; */
         }
         .box div{
-            width: 280px;
+            /* flex: 1; */
+            /* width: 280px; */
             height: 280px;
             float: left;
             border: 2px solid #000;
         }
-
+        .box div:first-child{
+            width: 200px;
+        }
+        .box div:nth-child(2){
+            flex: 1;
+        }
+        .box div:nth-child(3){
+            width: 200px;
+        }
     </style>
 </head>
 <body>
-    <div class="box clear">
+    <div class="box">
         <div>11111</div>
         <div>22222</div>
         <div>33333</div>
+        <!-- <div>33333</div>
         <div>44444</div>
         <div>55555</div>
         <div>66666</div>
         <div>77777</div>
-        <div>88888</div>
+        <div>88888</div> -->
     </div>
 </body>
 </html>
